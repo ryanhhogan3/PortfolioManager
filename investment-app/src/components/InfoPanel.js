@@ -7,3 +7,5 @@ function InfoPanel(){
         </div>
     )
 }
+
+export default InfoPanel
