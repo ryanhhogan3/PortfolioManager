@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route } from 'react-router-dom';
 import { sortStocksbyName } from './helper';
 import StockList from './components/StockList';
 import HoldingsList from './components/HoldingsList';
+import AnalyticsBoard from './components/Analytics';
 
 
 
@@ -30,6 +31,7 @@ function App() {
         <StockList 
           
         />
+        <AnalyticsBoard/>
       </header>
     </div>
 
