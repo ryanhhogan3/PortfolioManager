@@ -1,36 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
 import React from 'react';
-import {BrowserRouter as Router, Route } from 'react-router-dom';
-import { sortStocksbyName } from './helper';
+import { Pie } from 'react-chartjs-2';
+import './App.css';
 import StockList from './components/StockList';
 import AnalyticsBoard from './components/Analytics';
-
+//import PieChart from './components/PieChart';
+import PieChart from './components/PieChart'
 
 
 function App() {
   return (
-
- 
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-          
-        </a>
-        <StockList 
-          
-        />
-        <AnalyticsBoard/>
+      
+      <StockList/>
+      <AnalyticsBoard/>
+
+      <h3> Holdings by weight </h3>
+      <Pie data={PieChart} />
+
       </header>
     </div>
 
