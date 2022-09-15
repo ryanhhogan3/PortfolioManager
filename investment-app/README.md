@@ -70,4 +70,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
+<<<<<<< Updated upstream
+=======
+### npm install rainbowvis.js
+
+>>>>>>> Stashed changes
 ### npm install --save react-chartjs-2 chart.js
