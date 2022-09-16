@@ -1,5 +1,5 @@
 import React from "react";
-import SectorChart from "./SectorChart";
+
 
 function PerformancePanel(){
     return(

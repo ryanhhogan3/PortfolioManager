@@ -1,28 +1,42 @@
-//import React from 'react';
-import JsonData from "./data.json"
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import React from "react";
+import JsonData from './data.json'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend);
+
 let Rainbow = require('rainbowvis.js');
 
-let pieData =[];
-let pieLabels =[];
+let barData =[];
+let barLabels =[];
 
 /*Get  the total number of holdings */ 
 let count = Object.keys(JsonData).length;
 
 //Get labels + holdings from json file
 for(let i = 0; i < count; i++){
-    pieData.push(JsonData[i].pctPortfolio);
-    pieLabels.push(JsonData[i].longName);
+    barData.push(JsonData[i].pctPortfolio);
+    barLabels.push(JsonData[i].longName);
     
 }
-
 //Sorts the data by weight %
-let arrayOfObj = pieLabels.map(function(d, i) {
+let arrayOfObj = barLabels.map(function(d, i) {
   return {
     label: d,
-    data: pieData[i] || 0
+    data: barData[i] || 0
   };
 });
 
@@ -30,11 +44,11 @@ let sortedArrayOfObj = arrayOfObj.sort(function(a, b) {
     return b.data-a.data;
 });
 
-let newPieLabels = [];
-let newPieData = [];
+let newBarLabels = [];
+let newBarData = [];
 sortedArrayOfObj.forEach(function(d){
-    newPieLabels.push(d.label);
-    newPieData.push(d.data);
+    newBarLabels.push(d.label);
+    newBarData.push(d.data);
 });
 //End of sorting the data by weight %
 
@@ -57,17 +71,16 @@ shuffle(s);
 
 //End of Makes the color of Pie chart 
 
+//Displays all contents of Bar Chart
+export const BarChart = {
 
-//Displays all contents of Pie Chart
-export const PieChart = {
-
-  labels: newPieLabels,
+  labels: newBarLabels,
   datasets: [
     {    
-      data: newPieData,
-      backgroundColor: s,
-      borderColor: 'white',
-      borderWidth: 2.5,
+      label: 'Current Holdings',
+      data: newBarData,
+      backgroundColor:s,
+      backgroundColor: 'rgb(255, 99, 132)',
      
     },    
   ],
@@ -75,4 +88,4 @@ export const PieChart = {
 };
 
 
-export default PieChart
+export default BarChart
