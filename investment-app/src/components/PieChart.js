@@ -1,17 +1,18 @@
 //import React from 'react';
 import JsonData from "./data.json"
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 let Rainbow = require('rainbowvis.js');
 
-var pieData =[];
-var pieLabels =[];
+let pieData =[];
+let pieLabels =[];
 
 /*Get  the total number of holdings */ 
-var count = Object.keys(JsonData).length;
+let count = Object.keys(JsonData).length;
 
 //Get labels + holdings from json file
-for(var i = 0; i < count; i++){
+for(let i = 0; i < count; i++){
     pieData.push(JsonData[i].pctPortfolio);
     pieLabels.push(JsonData[i].longName);
     
@@ -29,8 +30,8 @@ let sortedArrayOfObj = arrayOfObj.sort(function(a, b) {
     return b.data-a.data;
 });
 
-var newPieLabels = [];
-var newPieData = [];
+let newPieLabels = [];
+let newPieData = [];
 sortedArrayOfObj.forEach(function(d){
     newPieLabels.push(d.label);
     newPieData.push(d.data);
@@ -39,13 +40,13 @@ sortedArrayOfObj.forEach(function(d){
 
 
 //Makes the color of Pie chart
-var numberOfItems = count;
-var rainbow = new Rainbow(); 
+let numberOfItems = count;
+let rainbow = new Rainbow(); 
 rainbow.setNumberRange(1, numberOfItems);
 rainbow.setSpectrum('#393E46','#EE6983', '#00ADB5','#FFC4C4');
-var s = [];
-for (var j = 1; j <= numberOfItems; j++) {
-    var hexColour = rainbow.colourAt(j);
+let s = [];
+for (let j = 1; j <= numberOfItems; j++) {
+    let hexColour = rainbow.colourAt(j);
     s.push('#' + hexColour);
 }
 function shuffle(o) {
