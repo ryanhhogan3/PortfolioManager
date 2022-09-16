@@ -45,6 +45,7 @@
   grid-column: span 2;
 }
 
+
 #pieChart{
   width: 40%;
   height: 40%;
@@ -55,6 +56,15 @@
   height: 40%;
 }
 
+.collapsible .content {
+  padding: 6px;
+  background-color: #282c34;
+}
+.collapsible .header {
+  background-color: #282c34;
+  padding: 6px;
+  cursor: pointer;
+}
 
 @keyframes App-logo-spin {
   from {

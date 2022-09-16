@@ -15,6 +15,7 @@ import { Bar } from 'react-chartjs-2';
 import { Scatter } from 'react-chartjs-2';
 import PieChartOptions from './components/PieChartOptions.js';
 import BarChartOptions from './components/BarChartOptions.js';
+import Collapsible from './components/CollapseStockList';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           />
       
       </div>
+      
 
 
 
