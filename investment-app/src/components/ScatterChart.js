@@ -16,6 +16,7 @@ ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 let scatterDataX =[];
 let scatterDataY = [];
 let scatterLabels =[];
+let collectiveData=[];
 
 /*Get  the total number of holdings */ 
 let count = Object.keys(JsonData).length;
@@ -24,33 +25,22 @@ let count = Object.keys(JsonData).length;
 for(let i = 0; i < count; i++){
     scatterDataX.push(JsonData[i].trailingEps);
     scatterDataY.push(JsonData[i].ebitdaMargins)
-    scatterLabels.push(JsonData[i].longName);
-    
+   // scatterLabels.push(JsonData[i].longName);
+  let x = scatterDataX[i];
+  let y= scatterDataY[i];
+  let storage = {x:x, y:y} 
+  collectiveData.push(storage)
 }
-console.log(scatterLabels);
-console.log(scatterDataX);
-console.log(scatterDataY);
 
 
 
 export const ScatterChart = {
+
     datasets: [
         {
-          label: 'A dataset',
-          data: [{
-            x:-10,
-            y:2
-          },{
-            x:-15,
-            y:5
-          },{
-            x:-11,
-            y:7
-          },{
-            x:-20,
-            y:8
-          }],
-          backgroundColor: 'rgba(255, 99, 132, 1)',
+        label: 'scatterLabels',
+         data:collectiveData,
+         borderColor: 'white',
         },
       ],
   };
