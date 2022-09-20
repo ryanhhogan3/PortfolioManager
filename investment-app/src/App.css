@@ -56,6 +56,17 @@
   height: 40%;
 }
 
+#scatterChart{
+  width: 40%;
+  height: 40%;
+}
+
+#SectorChart{
+  width: 40%;
+  height: 40%;
+}
+
+
 .collapsible .content {
   padding: 6px;
   background-color: #282c34;

@@ -35,14 +35,16 @@ for(let i = 0; i < count; i++){
 
 
 export const ScatterChart = {
-
+    
     datasets: [
-        {
-        label: 'scatterLabels',
-         data:collectiveData,
-         borderColor: 'white',
+        {      
+        label:'Legend',
+        data:collectiveData,
+        borderColor: 'white',
+
         },
       ],
+
   };
 
   export default ScatterChart

@@ -15,6 +15,8 @@ import { Bar } from 'react-chartjs-2';
 import { Scatter } from 'react-chartjs-2';
 import PieChartOptions from './components/PieChartOptions.js';
 import BarChartOptions from './components/BarChartOptions.js';
+import SectorChartOptions from './components/SectorChartOptions';
+import SectorChart from './components/SectorChart';
 import Collapsible from './components/CollapseStockList';
 
 function App() {
@@ -32,24 +34,31 @@ function App() {
         options={PieChartOptions}
       />
       </div>
+
       <div id = "barChart">
         <h2>Bar Chart</h2> 
         <Bar
           data={BarChart}
           options={BarChartOptions}
-          />
-      
+          />     
       </div>
-      <div id = "barChart">
+
+      <div id = "scatterChart">
         <h2>Scatter Chart</h2> 
         <Scatter
           data={ScatterChart}
           options={ScatterChartOptions}
-          />
-      
+          />  
       </div>
       
-
+      <div id = "SectorChart">
+        <h2>Sector Chart</h2> 
+        <Bar
+          data={SectorChart}
+          options={SectorChartOptions}
+          />  
+      </div>
+      
 
 
       </header>
