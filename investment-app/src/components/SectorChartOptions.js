@@ -1,6 +1,10 @@
 export const SectorChartOptions = {
     plugins: {
+      legend:{
+        display: false,
+    },
         title: {
+          
           display: false,
         },
       },    
