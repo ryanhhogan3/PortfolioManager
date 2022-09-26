@@ -15,8 +15,11 @@ ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 let scatterDataX =[];
 let scatterDataY = [];
+let scatterDataX2 =[];
+let scatterDataY2 = [];
 let scatterLabels =[];
 let collectiveData=[];
+let collectiveData2 = [];
 
 /*Get  the total number of holdings */ 
 let count = Object.keys(JsonData).length;
@@ -32,18 +35,36 @@ for(let i = 0; i < count; i++){
   collectiveData.push(storage)
 }
 
+for(let i = 0; i < count; i++){
+  scatterDataX2.push(JsonData[i].priceToBook);
+  scatterDataY2.push(JsonData[i].profitMargins)
+ // scatterLabels.push(JsonData[i].longName);
+let x = scatterDataX2[i];
+let y= scatterDataY2[i];
+let storage = {x:x, y:y} 
+collectiveData2.push(storage)
+}
+
 
 
 export const ScatterChart = {
+  
     
     datasets: [
         {      
-        label:'Legend',
+        label:'EPS vs EbitdaMargins',
         data:collectiveData,
         borderColor: 'white',
 
         },
+        {      
+          label:'EPS vs PE',
+          data:collectiveData2,
+          borderColor: 'white',
+  
+          },
       ],
+      
 
   };
 

@@ -13,6 +13,8 @@ import ScatterChartOptions from './components/ScatterChartOptions';
 import BarChart from './components/BarChart'
 import { Bar } from 'react-chartjs-2';
 import { Scatter } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2'
+import LineChart from './components/LineChart';
 import PieChartOptions from './components/PieChartOptions.js';
 import BarChartOptions from './components/BarChartOptions.js';
 import SectorChartOptions from './components/SectorChartOptions';
@@ -50,6 +52,14 @@ function App() {
           options={ScatterChartOptions}
           />  
       </div>
+      <div class="selectScatter">
+        <select>
+          <option value="PE">PE</option>
+          <option value="EPS">EPS</option>
+          <option value="BookValue">BookValue</option>
+
+        </select>
+      </div>
       
       <div id = "SectorChart">
         <h2>Sector Chart</h2> 
@@ -57,6 +67,13 @@ function App() {
           data={SectorChart}
           options={SectorChartOptions}
           />  
+      </div>
+
+      <div id="LineChart">
+        <h2>Line Chart</h2>
+        <Line 
+          data={LineChart}
+        />
       </div>
       
 
