@@ -1,82 +1,75 @@
 import histdata from './PortfolioValues.json'
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-  } from 'chart.js';
-import { Line } from 'react-chartjs-2';
+import {Chart as ChartJS, CategoryScale,LinearScale,PointElement,LineElement,Title,Tooltip,Legend,} from 'chart.js';
+//import { Line } from 'react-chartjs-2';
 
-ChartJS.register(
-CategoryScale,
-LinearScale,
-PointElement,
-LineElement,
-Title,
-Tooltip,
-Legend
-);
+ChartJS.register(CategoryScale,LinearScale,PointElement,LineElement,Title,Tooltip,Legend,);
 
-export const options = {
-responsive: true,
-plugins: {
-    legend: {
-    position: 'top',
-    },
-    title: {
-    display: true,
-    text: 'Chart.js Line Chart',
-    },
-},
+
+const histDate = Object.keys(histdata)
+const dataVal = Object.values(histdata)
+let count = Object.keys(histdata).length
+
+
+
+
+
+let histValues = [];
+for(let i = 1; i< count; i++){
+  const dataPoint={
+      Cash: dataVal[i].Cash,
+      'SP 500': dataVal[i]['SP 500'],
+      Total : dataVal[i].Total, 
+      histDate : histDate[i]
+  }
+  histValues.push(dataPoint)
 }
-// scales: {
-//     y: {
-//       title: {display: true, text: "Weight in lbs"}
-//     },
-//     x: {
-//       adapters: {
 
-//         type: "time",
-//         distribution: "linear",
-//         time: {
-//           parser: "yyyy-MM-dd",
-//           unit: "month"
-//         },
-//         title: {
-//           display: true,
-//           text: "Date"
-//         }
-//       }
-//     }
-//   },
-// };
 
-let values = [];
 
-const labels = Object.keys(histdata[1])
-const data = Object.values(histdata[1])
-//console.log(labels)
-// console.log(data)
+const newHistCash =[];
+const newHistDate =[];
+const newHistSP = [];
+const newHistTotal =[];
+//Changes string to float for [Cash, SP500, Portfolio value] 
+// need to plot
+// groups the date  and values together for plotting
+for(let i = 1; i< count ; i++){
+    newHistCash.push({x:histDate[i],y:parseFloat(dataVal[i].Cash.split(",").join(""))}) 
+    newHistDate.push(histDate[i])
+    newHistSP.push({x:histDate[i],y:parseFloat(dataVal[i]['SP 500'].split(",").join(""))})
+    newHistTotal.push({x:histDate[i],y:parseFloat(dataVal[i].Total.split(",").join(""))})
 
-console.log(data, labels)
+}
 
 export const LineChart = {
-    labels,
-    datasets: [
-      {
-        label: "dataset1",
-      data:[{
-        x:'2016-12-25', y:5000}, {x:'2016-12-31', y:6000}
-      ],
-      borderColor: 'rgb(255, 99, 132)',
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-      
-    ],
-  };
+  labels:newHistDate,
+  datasets: [
+    {
+      label: 'Cash',
+      data: newHistCash,
+      borderColor: "green",
+      backgroundColor: 'green',     
+      color:"green",
+      spanGaps: true,
+      pointRadius: 1,
 
+    },
+    {
+      label: 'SP500',
+      data: newHistSP,
+      borderColor: "red",
+      backgroundColor: 'red',     
+      spanGaps: true,
+      pointRadius: 1,
+    },
+    {
+      label: 'Portfolio Value',
+      data: newHistTotal,
+      borderColor: "blue",     
+      backgroundColor: 'blue',     
+      spanGaps: true,
+      pointRadius: 1,
+    },
+  ],
+}  
 export default LineChart;
