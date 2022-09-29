@@ -10,9 +10,6 @@ const dataVal = Object.values(histdata)
 let count = Object.keys(histdata).length
 
 
-
-
-
 let histValues = [];
 for(let i = 1; i< count; i++){
   const dataPoint={
@@ -23,7 +20,6 @@ for(let i = 1; i< count; i++){
   }
   histValues.push(dataPoint)
 }
-
 
 
 const newHistCash =[];
@@ -65,8 +61,8 @@ export const LineChart = {
     {
       label: 'Portfolio Value',
       data: newHistTotal,
-      borderColor: "blue",     
-      backgroundColor: 'blue',     
+      borderColor: "yellow",     
+      backgroundColor: 'yellow',     
       spanGaps: true,
       pointRadius: 1,
     },

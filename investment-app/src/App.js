@@ -24,19 +24,20 @@ function App() {
     <div className="App">
       <header className="App-header">
       <h1>Oregon State Investment Group</h1>
+      <div id="AnalyticsBoard">
+        <AnalyticsBoard/>
+      </div>
 
-      <AnalyticsBoard/>
-
-      <h3> Holdings by weight </h3>
-      <div id = "pieChart"> 
-      <Pie
-        data={PieChart}
-        options={PieChartOptions}
-      />
+      <div id="LineChart">
+        <h2>Line Chart</h2>
+        <Line 
+          data={LineChart}
+          options = {LineChartOptions}
+        />
       </div>
 
       <div id = "barChart">
-        <h2>Bar Chart</h2> 
+        <h2>Holdings Chart</h2> 
         <Bar
           data={BarChart}
           options={BarChartOptions}
@@ -58,23 +59,6 @@ function App() {
 
         </select>
       </div>
-      
-      <div id = "SectorChart">
-        <h2>Sector Chart</h2> 
-        <Bar
-          data={SectorChart}
-          options={SectorChartOptions}
-          />  
-      </div>
-
-      <div id="LineChart">
-        <h2>Line Chart</h2>
-        <Line 
-          data={LineChart}
-          options = {LineChartOptions}
-        />
-      </div>
-      
 
 
       </header>

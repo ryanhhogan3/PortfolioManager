@@ -2,7 +2,7 @@
 export const BarChartOptions = {
     plugins: {
         title: {
-          display: true,
+          display: false,
           text: 'Chart.js Bar Chart - Stacked',
         },
       },

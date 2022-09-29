@@ -28,6 +28,7 @@ function PerformancePanel(){
                 <tr>Five Years</tr>
                 <tr>OSIG: {portfolioData[0]["5 Year"]}%</tr>
                 <tr>SP500: {portfolioData[1]["5 Year"]}%</tr>
+                <br></br>
             </tr>
 
         </div>

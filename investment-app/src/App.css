@@ -35,24 +35,28 @@
 .panels {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 225px auto auto;
+  grid-template-columns: 500px auto auto;
   grid-template-rows: auto auto;
 }
 .panel-info {
-  grid-row: span 2;
+  grid-row: span 1;
 }
 .panel-positions {
-  grid-column: span 2;
+  grid-column: span 3;
+}
+.PerformancePanel{
+  font-size: medium;
+  text-align: center;
 }
 
 
 #pieChart{
-  width: 40%;
-  height: 40%;
+  width: 100%;
+  height: 90%;
 }
 
 #barChart{
-  width: 40%;
+  width: 60%;
   height: 40%;
 }
 
@@ -62,8 +66,8 @@
 }
 
 #SectorChart{
-  width: 40%;
-  height: 40%;
+  width: 100%;
+  height: 80%;
 }
 
 #LineChart{
