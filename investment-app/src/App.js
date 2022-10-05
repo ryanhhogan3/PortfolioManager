@@ -24,6 +24,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       <h1>Oregon State Investment Group</h1>
+      <h2>Values Accurate as of 10/6/2022</h2>
       <div id="AnalyticsBoard">
         <AnalyticsBoard/>
       </div>

@@ -5,7 +5,7 @@ export const PieChartOptions = {
             display: false,
         },
         legend: {
-            display: true,
+            display: false,
             position: "bottom",
             
             labels:{

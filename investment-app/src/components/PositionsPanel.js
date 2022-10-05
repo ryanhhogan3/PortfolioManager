@@ -6,7 +6,7 @@ function PositionsPanel(){
     return(
         <div className="PositionsPanel">
             Positions Panel
-            <Collapsible />
+            <PositionsPanelData/>
         </div>
     )
 }
