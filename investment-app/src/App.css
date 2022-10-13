@@ -61,6 +61,7 @@
   font-size: large;
   text-align: center;
   display: inline-block;
+  padding: 11%;
 }
 
 .PerformancePanel:hover{
@@ -124,6 +125,9 @@
 .stockTable{
   display: inline-block;
 }
+
+
+
 
 .panel-positions:hover{
   background-color: rgb(60, 63, 89);
