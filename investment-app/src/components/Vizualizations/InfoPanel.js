@@ -1,8 +1,7 @@
 import React from "react";
-import JsonData from './data.json'
 import { Pie } from 'react-chartjs-2';
-import PieChartOptions from "./PieChartOptions";
-import PieChart from './PieChart'
+import PieChartOptions from "../ChartOptions/PieChartOptions";
+import PieChart from '../Charts/PieChart'
 
 
 function InfoPanel(){

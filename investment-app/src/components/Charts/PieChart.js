@@ -1,5 +1,5 @@
 //import React from 'react';
-import JsonData from "./data.json"
+import JsonData from '../JSONFiles/data.json'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);

@@ -1,7 +1,8 @@
 import React from "react";
-import JsonData from "./data.json"
-import {useState} from "react"
+import JsonData from '../JSONFiles/data.json'
+//import {useState} from "react"
 
+/*
 function show_image(src, width, height, alt) {
     var img = document.createElement("img");
     img.src = src;
@@ -13,7 +14,7 @@ function show_image(src, width, height, alt) {
     // but you can adapt to make it append to the element you want.
     document.body.appendChild(img);
 }
-
+*/
 
 function PositionsPanelData(){
     const DisplayData=JsonData.map(
@@ -21,7 +22,7 @@ function PositionsPanelData(){
         return(
             <tr>
                 <div id="stockLogo">
-                    <img src={info.logo_url} />
+                    <img src={info.logo_url} alt =""  />
                 </div>
                 <td>{info.symbol}</td>
                 <td>{info.longName}</td>

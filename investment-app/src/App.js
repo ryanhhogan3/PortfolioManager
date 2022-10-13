@@ -1,22 +1,20 @@
 import React from 'react';
-import { Pie } from 'react-chartjs-2';
 import './App.css';
-//import StockList from './components/StockList';
-import AnalyticsBoard from './components/Analytics';
-import PieChart from './components/PieChart'
-import ScatterChart from './components/ScatterChart';
-import ScatterChartOptions from './components/ScatterChartOptions';
-
-
-import BarChart from './components/BarChart'
+import AnalyticsBoard from './components/Vizualizations/Analytics';
+import ScatterChart from './components/Charts/ScatterChart';
+import ScatterChartOptions from './components/ChartOptions/ScatterChartOptions';
+import BarChart from './components/Charts/BarChart'
 import { Bar,Scatter,Line } from 'react-chartjs-2';
+import LineChart from './components/Charts/LineChart.js';
+import LineChartOptions from './components/ChartOptions/LineChartOptions';
+import BarChartOptions from './components/ChartOptions/BarChartOptions.js';
 
-import LineChart from './components/LineChart.js';
-import LineChartOptions from './components/LineChartOptions';
-import PieChartOptions from './components/PieChartOptions.js';
-import BarChartOptions from './components/BarChartOptions.js';
-import SectorChartOptions from './components/SectorChartOptions';
-import SectorChart from './components/SectorChart';
+//import StockList from './components/StockList';
+//import SectorChartOptions from './components/ChartOptions/SectorChartOptions';
+//import SectorChart from './components/Charts/SectorChart';
+//import PieChart from './components/Charts/PieChart';
+//import { Pie } from 'react-chartjs-2';
+//import PieChartOptions from './components/ChartOptions/PieChartOptions.js';
 //import Collapsible from './components/CollapseStockList';
 
 function App() {

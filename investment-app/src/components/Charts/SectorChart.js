@@ -1,4 +1,4 @@
-import HoldingsData from './data.json'
+import HoldingsData from '../JSONFiles/data.json'
 import {Chart as ChartJS,CategoryScale,LinearScale,BarElement,Title,Tooltip,Legend} from 'chart.js';
 let Rainbow = require('rainbowvis.js');
 ChartJS.register(CategoryScale,

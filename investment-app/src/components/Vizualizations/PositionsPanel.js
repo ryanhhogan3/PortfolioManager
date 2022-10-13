@@ -1,7 +1,6 @@
 import React from "react";
-import Collapsible from "./CollapseStockList";
 import PositionsPanelData from "./PositionsPanelData";
-
+//import Collapsible from "./CollapseStockList";
 function PositionsPanel(){
     return(
         <div className="PositionsPanel">

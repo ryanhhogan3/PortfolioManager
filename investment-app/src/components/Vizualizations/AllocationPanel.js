@@ -1,9 +1,8 @@
 import React from "react";
-import SectorChart from "./SectorChart";
-import BarChart from './BarChart'
+import SectorChart from "../Charts/SectorChart";
 import { Bar } from 'react-chartjs-2';
-import SectorChartOptions from "./SectorChartOptions";
-
+import SectorChartOptions from "../ChartOptions/SectorChartOptions";
+//import BarChart from '../Charts/BarChart'
 
 
 function AllocationPanel(){

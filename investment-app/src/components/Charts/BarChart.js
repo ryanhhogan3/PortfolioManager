@@ -1,15 +1,7 @@
-import React from "react";
-import JsonData from './data.json'
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-import { Bar } from 'react-chartjs-2';
+import JsonData from '../JSONFiles/data.json'
+import {Chart as ChartJS,CategoryScale,LinearScale,BarElement,Title,Tooltip,Legend,} from 'chart.js';
+//import { Bar } from 'react-chartjs-2';
+//import React from "react";
 
 ChartJS.register(CategoryScale,
   LinearScale,
@@ -80,7 +72,7 @@ export const BarChart = {
       label: 'Current Holdings',
       data: newBarData,
       backgroundColor:s,
-      backgroundColor: 'rgb(255, 99, 132)',
+     // backgroundColor: 'rgb(255, 99, 132)',
      
     },    
   ],
