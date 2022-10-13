@@ -7,10 +7,8 @@ function PerformancePanel(){
     
     return(
         <div className="PerformancePanel">
-            Performance Panel
+            <h3>Performance Panel</h3>
             <tr>
-                <tr>Value: ${portfolioData.Value.YTD}</tr>
-                <tr>Cash: ${portfolioData.Cash.YTD}</tr>
                 <tr>Performance Metrics:</tr>
                 <tr>___________</tr>
                 <tr>Year To Date</tr>
