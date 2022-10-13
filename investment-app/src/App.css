@@ -45,8 +45,9 @@
 
 
 #pieChart{
-  width: 100%;
+  width: 90%;
   height: 90%;
+
 }
 
 #barChart{
@@ -78,5 +79,40 @@
   background-color: #282c34;
   padding: 6px;
   cursor: pointer;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-device-width: 480px){
+  .panels{
+    display: inline-block;
+    max-width: 470px;
+    
+  }
+  .PerformancePanel{
+    display: inline-flex;
+  }
+  .panel-positions{
+    display: inline-flex;
+  }
+  #pieChart{
+    display: none;
+  }
+  #LineChart{
+    display: none;
+  }
+  #barChart{
+    display: none;
+  }
+  #scatterChart{
+    display: none;
+  }
 }
 
