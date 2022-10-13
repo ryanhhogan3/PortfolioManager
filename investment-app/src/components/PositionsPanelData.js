@@ -20,9 +20,9 @@ function PositionsPanelData(){
     (info) =>{
         return(
             <tr>
-                <div id="stockLogo">
+                {/* <div id="stockLogo">
                     <img src={info.logo_url} />
-                </div>
+                </div> */}
                 <td>{info.symbol}</td>
                 <td>{info.longName}</td>
                 <td>{info.pegRatio}</td>
@@ -39,7 +39,7 @@ function PositionsPanelData(){
             <table class="stockTable">
                 <thead>
                     <tr>
-                        <th>Logo</th>
+                        {/* <th>Logo</th> */}
                         <th>Ticker</th>
                         <th>Company Name</th>
                         <th>Peg Ratio</th>

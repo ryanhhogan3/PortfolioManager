@@ -17,6 +17,7 @@ import PieChartOptions from './components/PieChartOptions.js';
 import BarChartOptions from './components/BarChartOptions.js';
 import SectorChartOptions from './components/SectorChartOptions';
 import SectorChart from './components/SectorChart';
+import Footer from './components/Footer';
 //import Collapsible from './components/CollapseStockList';
 
 function App() {
@@ -25,16 +26,17 @@ function App() {
       <header className="App-header">
       <h1>Oregon State Investment Group</h1>
       <h2>Values Accurate as of 10/6/2022</h2>
-      <div id="AnalyticsBoard">
-        <AnalyticsBoard/>
-      </div>
 
       <div id="LineChart">
-        <h2>Line Chart</h2>
+
         <Line 
           data={LineChart}
           options = {LineChartOptions}
         />
+      </div>
+
+      <div id="AnalyticsBoard">
+        <AnalyticsBoard/>
       </div>
 
       <div id = "barChart">
@@ -45,7 +47,7 @@ function App() {
           />     
       </div>
 
-      <div id = "scatterChart">
+      {/* <div id = "scatterChart">
         <h2>Scatter Chart</h2> 
         <Scatter
           data={ScatterChart}
@@ -59,6 +61,10 @@ function App() {
           <option value="BookValue">BookValue</option>
 
         </select>
+      </div> */}
+
+      <div id="footer">
+        <Footer />
       </div>
 
 

@@ -6,7 +6,7 @@ export const LineChartOptions = {
         position: 'top',
         },
         title: {
-        display: true,
+        display: false,
         text: 'Cash    SP500    PortfolioValue',
         }
     },
