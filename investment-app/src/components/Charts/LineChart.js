@@ -10,6 +10,24 @@ const dataVal = Object.values(histdata)
 let count = Object.keys(histdata).length
 
 
+export function timeFrame(value){
+  if(value === "1"){
+
+  }
+  if(value === "5"){
+    console.log("5")
+  }
+  if(value === "10"){
+    console.log("10")
+  }
+  if(value === 'All'){
+    console.log("All")
+  }
+}
+
+
+
+
 let histValues = [];
 for(let i = 1; i< count; i++){
   const dataPoint={

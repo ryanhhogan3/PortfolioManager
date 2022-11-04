@@ -5,9 +5,10 @@ import ScatterChart from './components/Charts/ScatterChart';
 import ScatterChartOptions from './components/ChartOptions/ScatterChartOptions';
 import BarChart from './components/Charts/BarChart'
 import { Bar,Scatter,Line } from 'react-chartjs-2';
-import LineChart from './components/Charts/LineChart.js';
+import {LineChart,timeFrame} from './components/Charts/LineChart.js';
 import LineChartOptions from './components/ChartOptions/LineChartOptions';
 import BarChartOptions from './components/ChartOptions/BarChartOptions.js';
+import grossMargins from './components/Charts/grossMargin';
 
 //import StockList from './components/StockList';
 //import SectorChartOptions from './components/ChartOptions/SectorChartOptions';
@@ -17,7 +18,11 @@ import BarChartOptions from './components/ChartOptions/BarChartOptions.js';
 //import PieChartOptions from './components/ChartOptions/PieChartOptions.js';
 //import Collapsible from './components/CollapseStockList';
 
+
+
+
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -27,8 +32,18 @@ function App() {
         <AnalyticsBoard/>
       </div>
 
-      <div id="LineChart">
-        <h2>Line Chart</h2>
+
+
+      <div class="LineChart">
+      <canvas id = "myChart" width="1300" height="100"></canvas>
+        <div class="chart">
+
+            <button onClick={() => timeFrame("1")}>1 Year</button>
+            <button onClick={() =>timeFrame("5")}>5 Years</button>
+            <button onClick={() =>timeFrame("10")}>10 Years</button>
+            <button onClick={() =>timeFrame("All")}>All</button>
+          
+        </div>
         <Line 
           data={LineChart}
           options = {LineChartOptions}
@@ -36,30 +51,29 @@ function App() {
       </div>
 
       <div id = "barChart">
-        <h2>Holdings Chart</h2> 
+        <h2>Holdings</h2> 
         <Bar
           data={BarChart}
           options={BarChartOptions}
           />     
       </div>
+      
+      <div id = "GrossMargins">
+        <h2>Gross Margins</h2> 
+        <Bar
+          data={grossMargins}
+          options={BarChartOptions}
+          />     
+      </div>
 
       <div id = "scatterChart">
-        <h2>Scatter Chart</h2> 
+        <h3>EPS vs EbitdaMargins / EPS vs PE</h3>        
         <Scatter
           data={ScatterChart}
           options={ScatterChartOptions}
           />  
       </div>
-      <div class="selectScatter">
-        <select>
-          <option value="PE">PE</option>
-          <option value="EPS">EPS</option>
-          <option value="BookValue">BookValue</option>
-
-        </select>
-      </div>
-
-
+ 
       </header>
     </div>
 

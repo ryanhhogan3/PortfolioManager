@@ -5,10 +5,7 @@ export const LineChartOptions = {
         legend: {
         position: 'top',
         },
-        title: {
-        display: true,
-        text: 'Cash    SP500    PortfolioValue',
-        }
+
     },
     elements:{
         line:{
@@ -19,8 +16,6 @@ export const LineChartOptions = {
             pointStyle: "crossRot",
         }
     }
-    
-
 }
     
 export default LineChartOptions

@@ -54,7 +54,10 @@
   width: 60%;
   height: 40%;
 }
-
+#GrossMargins{
+  width: 50%;
+  height: 40%;
+}
 #scatterChart{
   width: 40%;
   height: 40%;
@@ -66,7 +69,7 @@
 }
 
 #LineChart{
-  width: 80%;
+  width: 100%;
   height: 80%;
 }
 
