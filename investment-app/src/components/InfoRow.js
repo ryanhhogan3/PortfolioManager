@@ -5,20 +5,20 @@ function InfoRow() {
     <div class="Info-row">
       <div class="column">
         <h3>Cash</h3>
-        <p>$75,214.67</p>
+        <p>$61,383.48</p>
       </div>
       <div class="column">
       <h3>Weekly Change</h3>
-        <p>-$9,183.50</p>
+        <p>-$80,495</p>
       </div>
       <div class="column">
-      <h4>Year-To-Date Dividends</h4>
-        <p>+$39,470.88
+      <h4>YTD Dividends</h4>
+        <p>+$43,962
         </p>
       </div>
       <div class="column">
       <h3>1 Year Beta</h3>
-        <p>0.88</p>
+        <p>0.89</p>
       </div>
     </div>
   );

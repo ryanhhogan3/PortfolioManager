@@ -12,20 +12,20 @@ function PerformancePanel(){
                 <tr>Performance Metrics:</tr>
                 <tr>___________</tr>
                 <tr>Year To Date</tr>
-                <tr>OSIG: -22.50%</tr>
-                <tr>SP500: -21.94%</tr>
+                <tr>OSIG: -21.27%</tr>
+                <tr>SP500: -20.79%</tr>
                 <tr>___________</tr>
                 <tr>One Year</tr>
-                <tr>OSIG: -25.13%</tr>
-                <tr>SP500: -20.25%</tr>
+                <tr>OSIG: -23.66%</tr>
+                <tr>SP500: -19.99%</tr>
                 <tr>___________</tr>
                 <tr>Three Years</tr>
-                <tr>OSIG: 17.55%</tr>
-                <tr>SP500: 20.68%</tr>
+                <tr>OSIG: 17.69%</tr>
+                <tr>SP500: 20.13%</tr>
                 <tr>___________</tr>
                 <tr>Since Inception</tr>
-                <tr>OSIG: 224.07%</tr>
-                <tr>SP500: 221.08%</tr>
+                <tr>OSIG: 229.20%</tr>
+                <tr>SP500: 225.82%</tr>
                 <br></br>
             </tr>
 
