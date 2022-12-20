@@ -4,9 +4,9 @@ import PieChartOptions from "../ChartOptions/PieChartOptions";
 import PieChart from '../Charts/PieChart'
 
 
-function InfoPanel(){
+function PiePanel(){
     return(
-        <div className="InfoPanel">
+        <div className="PiePanel">
             Info Panel
             <div id = "pieChart"> 
       <Pie
@@ -19,4 +19,4 @@ function InfoPanel(){
     )
 }
 
-export default InfoPanel
+export default PiePanel

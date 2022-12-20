@@ -11,7 +11,6 @@ function PerformancePanel(){
             <tr>
                 <tr>Value: ${portfolioData.Value.YTD}</tr>
                 <tr>Cash: ${portfolioData.Cash.YTD}</tr>
-                <tr>Performance Metrics:</tr>
                 <tr>___________</tr>
                 <tr>Year To Date</tr>
                 <tr>OSIG: {portfolioData[0].YTD}%</tr>

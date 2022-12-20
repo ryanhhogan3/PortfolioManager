@@ -9,6 +9,7 @@ import {LineChart,timeFrame} from './components/Charts/LineChart.js';
 import LineChartOptions from './components/ChartOptions/LineChartOptions';
 import BarChartOptions from './components/ChartOptions/BarChartOptions.js';
 import grossMargins from './components/Charts/grossMargin';
+import Footer from './components/Vizualizations/Footer';
 
 //import StockList from './components/StockList';
 //import SectorChartOptions from './components/ChartOptions/SectorChartOptions';
@@ -27,12 +28,9 @@ function App() {
     <div className="App">
       <header className="App-header">
       <h1>Oregon State Investment Group</h1>
-      <h2>Values Accurate as of 10/6/2022</h2>
       <div id="AnalyticsBoard">
         <AnalyticsBoard/>
       </div>
-
-
 
       <div class="LineChart">
       <canvas id = "myChart" width="1300" height="100"></canvas>
@@ -73,9 +71,16 @@ function App() {
           options={ScatterChartOptions}
           />  
       </div>
- 
+
+
+
+      <div id="footer">
+        <Footer />
+      </div>
+
       </header>
     </div>
+    
 
   );
 }

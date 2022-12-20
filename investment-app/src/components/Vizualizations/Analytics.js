@@ -1,8 +1,9 @@
 import React from "react";
-import InfoPanel from "./InfoPanel"
+import PiePanel from "./InfoPanel"
 import AllocationPanel from "./AllocationPanel";
 import PerformancePanel from "./PerformancePanel";
 import PositionsPanel from "./PositionsPanel";
+import InfoRow from "./InfoRow";
 
 
 
@@ -10,8 +11,12 @@ import PositionsPanel from "./PositionsPanel";
 function AnalyticsBoard(){
     return(
         <div className="panels">
+          
         <div className="panel-info">
-          <InfoPanel />
+          <InfoRow />
+        </div>
+        <div className="panel-pie">
+          <PiePanel />
         </div>
         <div className="panel-allocation">
           <AllocationPanel />
@@ -19,6 +24,7 @@ function AnalyticsBoard(){
         <div className="panel-balance">
           <PerformancePanel />
         </div>
+        
         <div className="panel-positions">
           <PositionsPanel />
         </div>
