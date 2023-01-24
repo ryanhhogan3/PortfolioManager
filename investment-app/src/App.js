@@ -5,12 +5,12 @@ import ScatterChart from './components/Charts/ScatterChart';
 import ScatterChartOptions from './components/ChartOptions/ScatterChartOptions';
 import BarChart from './components/Charts/BarChart'
 import { Bar,Scatter,Line } from 'react-chartjs-2';
-import {LineChart,timeFrame} from './components/Charts/LineChart.js';
+import {LineChart} from './components/Charts/LineChart.js';
 import LineChartOptions from './components/ChartOptions/LineChartOptions';
 import BarChartOptions from './components/ChartOptions/BarChartOptions.js';
 import grossMargins from './components/Charts/grossMargin';
 import Footer from './components/Vizualizations/Footer';
-
+import OsigLogo from './components/Images/osig-word-logo-transparent.png'
 //import StockList from './components/StockList';
 //import SectorChartOptions from './components/ChartOptions/SectorChartOptions';
 //import SectorChart from './components/Charts/SectorChart';
@@ -27,21 +27,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h1>Oregon State Investment Group</h1>
+
+      <div className = "Osig">
+        <img src={OsigLogo} alt="My PNG file" style={{ width: '280px', height: '70px' }} />
+      </div>
+
       <div id="AnalyticsBoard">
         <AnalyticsBoard/>
       </div>
 
       <div class="LineChart">
       <canvas id = "myChart" width="1300" height="100"></canvas>
-        <div class="chart">
-
-            <button onClick={() => timeFrame("1")}>1 Year</button>
-            <button onClick={() =>timeFrame("5")}>5 Years</button>
-            <button onClick={() =>timeFrame("10")}>10 Years</button>
-            <button onClick={() =>timeFrame("All")}>All</button>
-          
-        </div>
         <Line 
           data={LineChart}
           options = {LineChartOptions}

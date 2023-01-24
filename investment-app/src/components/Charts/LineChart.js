@@ -5,25 +5,10 @@ import {Chart as ChartJS, CategoryScale,LinearScale,PointElement,LineElement,Tit
 ChartJS.register(CategoryScale,LinearScale,PointElement,LineElement,Title,Tooltip,Legend,);
 
 
+
 const histDate = Object.keys(histdata)
 const dataVal = Object.values(histdata)
 let count = Object.keys(histdata).length
-
-
-export function timeFrame(value){
-  if(value === "1"){
-
-  }
-  if(value === "5"){
-    console.log("5")
-  }
-  if(value === "10"){
-    console.log("10")
-  }
-  if(value === 'All'){
-    console.log("All")
-  }
-}
 
 
 
@@ -44,6 +29,8 @@ const newHistCash =[];
 const newHistDate =[];
 const newHistSP = [];
 const newHistTotal =[];
+
+
 //Changes string to float for [Cash, SP500, Portfolio value] 
 // need to plot
 // groups the date  and values together for plotting
@@ -87,3 +74,4 @@ export const LineChart = {
   ],
 }  
 export default LineChart;
+
