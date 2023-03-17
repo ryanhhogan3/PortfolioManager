@@ -1,0 +1,70 @@
+
+
+function App() {
+
+  return (
+
+    
+    <div className="App">
+      <header className="App-header">
+
+      <div className = "Osig">
+        <img src={OsigLogo} alt="My PNG file" style={{ width: '280px', height: '70px' }} />
+      </div>
+      <div class="tab">
+        <button class="tablinks" onclick="WeeklyPerformance(event, 'London')">WeeklyPerformance</button>
+        <button class="tablinks" onclick="GetPortfolioData(event, 'Paris')">GetPortfolioData</button>
+        <button class="tablinks" onclick="CompanyDetails(event, 'Tokyo')">CompanyDetails</button>
+      </div>
+      
+      <div id="AnalyticsBoard">
+        <AnalyticsBoard/>
+      </div>
+
+      <div class="LineChart">
+        
+      <canvas id = "myChart" width="1300" height="100"></canvas>
+        <Line 
+          data={LineChart}
+          options = {LineChartOptions}
+        />
+      </div>
+
+      <div id = "barChart">
+        <h2>Holdings</h2> 
+        <Bar
+          data={BarChart}
+          options={BarChartOptions}
+          />     
+      </div>
+      
+      <div id = "GrossMargins">
+        <h2>Gross Margins</h2> 
+        <Bar
+          data={grossMargins}
+          options={BarChartOptions}
+          />     
+      </div>
+
+      <div id = "scatterChart">
+        <h3>EPS vs EbitdaMargins / EPS vs PE</h3>        
+        <Scatter
+          data={ScatterChart}
+          options={ScatterChartOptions}
+          />  
+      </div>
+
+
+
+      <div id="footer">
+        <Footer />
+      </div>
+
+      </header>
+    </div>
+    
+
+  );
+}
+
+export default App;

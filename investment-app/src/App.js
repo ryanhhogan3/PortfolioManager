@@ -4,13 +4,14 @@ import AnalyticsBoard from './components/Vizualizations/Analytics';
 import ScatterChart from './components/Charts/ScatterChart';
 import ScatterChartOptions from './components/ChartOptions/ScatterChartOptions';
 import BarChart from './components/Charts/BarChart'
-import { Bar,Scatter,Line } from 'react-chartjs-2';
-import {LineChart} from './components/Charts/LineChart.js';
-import LineChartOptions from './components/ChartOptions/LineChartOptions';
+import { Bar,Scatter } from 'react-chartjs-2';
+//import {LineChart} from './components/Charts/LineChart.js';
+//import LineChartOptions from './components/ChartOptions/LineChartOptions';
 import BarChartOptions from './components/ChartOptions/BarChartOptions.js';
 import grossMargins from './components/Charts/grossMargin';
 import Footer from './components/Vizualizations/Footer';
 import OsigLogo from './components/Images/osig-word-logo-transparent.png'
+import WeeklyPerformance from './components/Vizualizations/WeeklyPerformance';
 //import StockList from './components/StockList';
 //import SectorChartOptions from './components/ChartOptions/SectorChartOptions';
 //import SectorChart from './components/Charts/SectorChart';
@@ -25,23 +26,25 @@ import OsigLogo from './components/Images/osig-word-logo-transparent.png'
 function App() {
 
   return (
+
+    
     <div className="App">
       <header className="App-header">
 
       <div className = "Osig">
         <img src={OsigLogo} alt="My PNG file" style={{ width: '280px', height: '70px' }} />
       </div>
-
-      <div id="AnalyticsBoard">
-        <AnalyticsBoard/>
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'WeeklyPerformance')">Weekly Performance</button>
+        <button class="tablinks" onclick="openTab(event, 'GetPortfolioData')">Get Portfolio Data</button>
+        <button class="tablinks" onclick="openTab(event, 'CompanyDetails')">Company Details</button>
       </div>
 
-      <div class="LineChart">
-      <canvas id = "myChart" width="1300" height="100"></canvas>
-        <Line 
-          data={LineChart}
-          options = {LineChartOptions}
-        />
+      <div id="WeeklyPerformance">
+        <WeeklyPerformance/>
+      </div>
+      <div id="AnalyticsBoard">
+        <AnalyticsBoard/>
       </div>
 
       <div id = "barChart">

@@ -48,8 +48,8 @@ export const LineChart = {
     {
       label: 'Cash',
       data: newHistCash,
-      borderColor: "green",
-      backgroundColor: 'green',     
+      borderColor: "blue",
+      backgroundColor: 'blue',     
       color:"green",
       spanGaps: true,
       pointRadius: 1,
@@ -66,8 +66,8 @@ export const LineChart = {
     {
       label: 'Portfolio Value',
       data: newHistTotal,
-      borderColor: "yellow",     
-      backgroundColor: 'yellow',     
+      borderColor: "orange",     
+      backgroundColor: 'orange',     
       spanGaps: true,
       pointRadius: 1,
     },
