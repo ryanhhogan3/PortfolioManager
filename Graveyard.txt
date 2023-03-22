@@ -68,3 +68,81 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+function App() {
+
+  return (
+
+    
+    <div className="App">
+      <header className="App-header">
+
+      <div className = "Osig">
+        <img src={OsigLogo} alt="My PNG file" style={{ width: '280px', height: '70px' }} />
+      </div>
+
+      <div class="navbar">
+    
+        <Link to='./weeklyPerformance.js' class="navbar" >Weekly Performance</Link>      
+        <Link to='./weeklyPerformance' class="navbar" >Get Portfolio Data</Link>
+        <Link to='./weeklyPerformance' class="navbar" > Company Details</Link>
+        <a href="https://www.oregonstateinvestmentgroup.com/">OSIG Website</a>.
+
+      </div>
+
+      <div id="WeeklyPerformance">
+        <WeeklyPerformance/>
+      </div>
+      <div id="AnalyticsBoard">
+        <AnalyticsBoard/>
+      </div>
+
+      <div id = "barChart">
+        <h2>Holdings</h2> 
+        <Bar
+          data={BarChart}
+          options={BarChartOptions}
+          />     
+      </div>
+      
+      <div id = "GrossMargins">
+        <h2>Gross Margins</h2> 
+        <Bar
+          data={grossMargins}
+          options={BarChartOptions}
+          />     
+      </div>
+
+      <div id = "scatterChart">
+        <h3>EPS vs EbitdaMargins / EPS vs PE</h3>        
+        <Scatter
+          data={ScatterChart}
+          options={ScatterChartOptions}
+          />  
+      </div>
+
+
+
+      <div id="footer">
+        <Footer />
+      </div>
+
+      </header>
+    </div>
+    
+
+  );
+}
+
+export default App;

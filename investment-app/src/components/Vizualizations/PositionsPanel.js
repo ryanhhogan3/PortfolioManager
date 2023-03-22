@@ -4,7 +4,7 @@ import PositionsPanelData from "./PositionsPanelData";
 function PositionsPanel(){
     return(
         <div className="PositionsPanel">
-            Positions Panel
+            Current Holdings
             <PositionsPanelData/>
         </div>
     )
