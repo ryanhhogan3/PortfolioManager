@@ -8,9 +8,8 @@ import SectorChartOptions from "../ChartOptions/SectorChartOptions";
 function AllocationPanel(){
     return(
         <div className="Allocation-panel">
-            Allocation Panel
             <div id = "SectorChart">
-
+        Holdings By Sector  
         <Bar
           data={SectorChart}
           options={SectorChartOptions}

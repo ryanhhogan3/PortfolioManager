@@ -7,11 +7,14 @@ import BarChartOptions from '../ChartOptions/BarChartOptions';
 import ScatterChart from '../Charts/ScatterChart';
 import ScatterChartOptions from '../ChartOptions/ScatterChartOptions';
 import grossMargins from '../Charts/grossMargin';
+
 //import {Link,Route,Routes } from "react-router-dom";
 
 function AnalyticsBoard(){
     return(
+      
         <div className="panels">
+          Analytics Board
 
         <div className="panel-pie">
           <PiePanel />
@@ -20,7 +23,7 @@ function AnalyticsBoard(){
           <AllocationPanel />
         </div>
 
-        <div id = "barChart">
+        <div className = "barChart">
           <h2>Holdings</h2> 
           <Bar
             data={BarChart}
@@ -28,7 +31,7 @@ function AnalyticsBoard(){
           />     
         </div>
 
-        <div id = "GrossMargins">
+        <div className = "GrossMargins">
           <h2>Gross Margins</h2> 
             <Bar
              data={grossMargins}
@@ -36,7 +39,7 @@ function AnalyticsBoard(){
             />     
         </div>
 
-        <div id = "scatterChart">
+        <div className = "scatterChart">
           <h3>EPS vs EbitdaMargins / EPS vs PE</h3>        
             <Scatter
              data={ScatterChart}

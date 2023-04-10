@@ -3,8 +3,9 @@ import PositionsPanelData from "./PositionsPanelData";
 //import Collapsible from "./CollapseStockList";
 function PositionsPanel(){
     return(
+
         <div className="PositionsPanel">
-            Current Holdings
+            <h3 className= "title"> Our Current Holdings </h3>
             <PositionsPanelData/>
         </div>
     )

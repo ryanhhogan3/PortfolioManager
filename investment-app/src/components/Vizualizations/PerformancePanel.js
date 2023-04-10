@@ -7,7 +7,7 @@ function PerformancePanel(){
     
     return(
         <div className="PerformancePanel">
-            Performance Panel
+            OSIG Performance
             <tr>
                 <tr>Value: ${portfolioData.Value.YTD}</tr>
                 <tr>Cash: ${portfolioData.Cash.YTD}</tr>

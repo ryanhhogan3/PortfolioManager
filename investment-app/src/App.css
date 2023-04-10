@@ -7,7 +7,7 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
+  display: table-row-group-middle;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -23,11 +23,12 @@
   font-family:'Lato', sans-serif;
   border-color:rgb(14, 14, 14);
   text-transform: uppercase;
-  border-radius: 30px;
+  border-radius: px;
   padding: 15px 32px;
   border-spacing: 10px;
   
 }
+
 
 
 .panels > div {
@@ -47,20 +48,23 @@
   grid-gap: 0px;
   grid-template-columns: 1600px auto auto;
   grid-template-rows: auto auto;
-
+  padding-left: 6%;
+  left: -50px;
 }
 
 
 .Osig{
-  padding:30px;
+  padding:20px;
 }
 
-.panel-info {
-  grid-row: span 1;
+
+
+.PositionsPanel{
+ color:black;
+ padding-left: 17%;
+ text-align: middle;
 }
-.panel-positions {
-  grid-column: span 3;
-}
+
 .PerformancePanel{
   position: relative;
   font-size: medium;
@@ -69,13 +73,57 @@
   font-size: 25px;
   color: black;
   border: 2px solid rgb(228, 226, 226);
-  padding-left: 20px;
+  padding-left: 0px;
+  padding-top: 20px;
+}
+.title{
+  text-align: center;
+  position: relative;
+  padding-right:17%;
+}
+
+.Allocation-panel{
+  display: inline-block;
+  height: 90%;
+  width: 95%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+.CompanyHoldingsByWeight{
+  padding-top:10px;
+  padding-left:10px;
+  display: inline-flex;
+  height: 90%;
+  width: 95%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+.barChart{
+  display: inline-block;
+  height: 90%;
+  width: 95%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+.GrossMargins{
+  display: inline-block;
+  height: 90%;
+  width: 95%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+.scatterChart{
+  display: inline-block;
+  height: 70%;
+  width: 95%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
 }
 
 
 #pieChart{
-  width: 90%;
-  height: 90%;
+  width: 30%;
+  height: 30%;
   background-color: rgb(253, 253, 253);
 }
 
@@ -100,6 +148,7 @@
 #LineChart{
   width: 100%;
   height: 80%;
+
 }
 
 #footer{
@@ -122,11 +171,6 @@
   padding: 6px;
   background-color: #282c34;
 }
-.collapsible .header {
-  background-color: #282c34;
-  padding: 6px;
-  cursor: pointer;
-}
 
 
 @media only screen and (max-device-width: 480px){
@@ -148,6 +192,7 @@
   }
   #LineChart{
     display: inline-flex;
+    
   }
   #barChart{
     display: none;

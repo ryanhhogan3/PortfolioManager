@@ -40,19 +40,22 @@ function App() {
         <a href="https://www.oregonstateinvestmentgroup.com/">OSIG Website</a>.
 
       </div>
+      
+      
 
       <Routes>
-        <Route path = '/weeklyperformance'element = {<WeeklyPerformance/>}  />
+        <Route path = '/weeklyperformance'element = {<WeeklyPerformance/>} />
         <Route path = '/Analytics'element = {<AnalyticsBoard/>}  />
         <Route path = '/PositionsPanel'element = {<PositionsPanel/>}  />
       </Routes>
 
-  
+      </header>
+
       <div id="footer">
         <Footer />
       </div>
 
-      </header>
+
     </div>
     
 
